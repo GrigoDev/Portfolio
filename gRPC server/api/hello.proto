@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package greet;
+
+service GreetService {
+  // метод для приветствия
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+// Запрос на приветствие
+message HelloRequest {
+  string name = 1; // имя пользователя
+}
+
+// Ответ с приветствием
+message HelloResponse {
+  string message = 1; // сообщение от сервера
+}
